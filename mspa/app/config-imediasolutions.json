@@ -9,11 +9,17 @@
           "1B" : ["container-1-1", "tabpane"],
           "1C" : ["container-1-1", "tabpane"],
           "1D" : ["container-1-1", "tabpane"],
-          "container-1-1" : ["container-1", "tabcontent"]
+          "container-1-1" : ["container-1", "tabcontent"],
+          "overview-container" : ["1E", "tabcontent"]
         },
         "modules" : {
-          "deptTabs" : {"parentID" : "container-1", "template" : "m-depttabs", "position" : "top", "dataSource" : "api/depttab.json", "model" : "TabsModel"},
-          "overviewTabs" : {"parentID" : "1E", "template" : "m-depttabs", "position" : "top", "dataSource" : "api/overviewtab.json", "model" : "TabsModel"},
+          "deptTabs" : {"parentID" : "container-1", "template" : "m-depttabs", "position" : "top", "dataSource" : "../../api/depttab.json", "model" : "TabsModel"},
+          "overviewTabs" : {"parentID" : "1E", "template" : "m-depttabs", "position" : "top", "dataSource" : "../../api/overviewtab.json", "model" : "TabsModel"},
+          "1E1" : {"parentID" : "overview-container", "template" : "m-overview", "model" :"OverviewModel"},
+          "1E2" : {"parentID" : "overview-container", "template" : "m-overview", "model" :"OverviewModel"},
+          "1E3" : {"parentID" : "overview-container", "template" : "m-overview", "model" :"OverviewModel"},
+          "1E4" : {"parentID" : "overview-container", "template" : "m-overview", "model" :"OverviewModel"},
+          "1E5" : {"parentID" : "overview-container", "template" : "m-overview", "model" :"OverviewModel"},
           "toolbar" : {"parentID" : "container-1-1", "template" : "m-toolbar", "position" : "top"}
         }
       }
