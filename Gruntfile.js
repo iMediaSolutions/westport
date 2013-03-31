@@ -76,7 +76,7 @@ module.exports = function(grunt) {
     //Watch
     watch: {
       coffeesrc: {
-          files: ['coffeescript/**/*.coffee'],
+          files: ['coffee/**/*.coffee'],
           tasks: ['coffee','rubyHaml']
       },
       haml: {

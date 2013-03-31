@@ -9,7 +9,7 @@
   %body
     #main
       .tabbable.tabs-left
-        %ul.nav.nav-tabs
+        %ul.nav.nav-tabs#deptTabs
           %li.active
             %a{"data-toggle" => "tab", :href => "#1A"} Police
           %li
@@ -27,3 +27,4 @@
             %p And Section C
           #1D.tab-pane
             %p Finally Section D
+    %script{"data-main" => "js/core", :src => "js/vendors/require-jquery.js"}
