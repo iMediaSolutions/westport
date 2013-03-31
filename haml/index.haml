@@ -1,0 +1,29 @@
+!!!
+%html
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+    %title
+    %meta{:content => "width=device-width", :name => "viewport"}
+    %link{:href => "css/bootstrap.min.css", :rel => "stylesheet"}
+  %body
+    #main
+      .tabbable.tabs-left
+        %ul.nav.nav-tabs
+          %li.active
+            %a{"data-toggle" => "tab", :href => "#1A"} Police
+          %li
+            %a{"data-toggle" => "tab", :href => "#1B"} Fire
+          %li
+            %a{"data-toggle" => "tab", :href => "#1C"} EMS
+          %li
+            %a{"data-toggle" => "tab", :href => "#1D"} DPW
+        .tab-content
+          #1A.tab-pane.active
+            %p Hello Section A
+          #1B.tab-pane
+            %p Hello Section B
+          #1C.tab-pane
+            %p And Section C
+          #1D.tab-pane
+            %p Finally Section D
