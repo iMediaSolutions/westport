@@ -28,10 +28,17 @@
               .accordion-group
                 .accordion-heading
                   %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseOne"}
-                    Collapsible Group Item #1
+                    Record #15050340
                 #collapseOne.accordion-body.collapse.in
                   .accordion-inner
-                    Anim pariatur cliche...
+                    .pull-left
+                      %form
+                        %fieldset
+                          %legend Notes
+                          %textarea{:rows => "3"}
+                    .pull-right
+                      %iframe{:frameborder => "0", :height => "300", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "https://maps.google.com/maps?hl=en&amp;q=818+Main+Road+Westport,+MA&amp;ie=UTF8&amp;hq=&amp;hnear=818+Main+Rd,+Westport,+Massachusetts+02790&amp;gl=us&amp;t=m&amp;ll=41.578984,-71.09004&amp;spn=0.019261,0.025749&amp;z=14&amp;iwloc=A&amp;output=embed", :width => "300"}
+
               .accordion-group
                 .accordion-heading
                   %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseTwo"}
