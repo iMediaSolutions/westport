@@ -11,6 +11,7 @@
   paths: {
     underscore: '../vendors/underscore',
     backbone: '../vendors/backbone',
+    bootstrap: "../vendors/bootstrap.min",
     route: 'route',
     uri: '../vendors/URIjs',
     controllers: '../controllers',
@@ -19,6 +20,6 @@
   }
 });
 
-require(['route'], function(Router) {
+require(['route', 'bootstrap'], function(Router) {
   return console.log(Router);
 });

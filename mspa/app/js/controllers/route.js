@@ -21,73 +21,78 @@ require(['backbone', 'uri/URI', 'models/namespace'], function(Backbone, URI, nam
     });
     app_router = new AppsRouter;
     displayHeaderFooterSidebar = function(route) {
-      var containers, error, modules;
+      var containers, err, error, modules;
 
       $('#header').html('');
       $('#footer').html('');
       $('#sidebar').html('');
-      modules = data.controllers[route].header.modules;
-      if (modules !== void 0) {
-        $.each(modules, function(id, module) {
-          return $(document).on(module.parentID, function() {
-            $(this).unbind(module.parentID, arguments.callee);
-            if ($('#' + id).length > 0) {
-              $('#' + id).replaceWith('<div id="' + id + '-pre"></div>');
-            } else {
-              if (module.position === 'top') {
-                $('#' + module.parentID).prepend('<div id="' + id + '-pre"></div>');
+      try {
+        modules = data.controllers[route].header.modules;
+        if (modules !== void 0) {
+          $.each(modules, function(id, module) {
+            return $(document).on(module.parentID, function() {
+              $(this).unbind(module.parentID, arguments.callee);
+              if ($('#' + id).length > 0) {
+                $('#' + id).replaceWith('<div id="' + id + '-pre"></div>');
               } else {
-                $('#' + module.parentID).append('<div id="' + id + '-pre"></div>');
+                if (module.position === 'top') {
+                  $('#' + module.parentID).prepend('<div id="' + id + '-pre"></div>');
+                } else {
+                  $('#' + module.parentID).append('<div id="' + id + '-pre"></div>');
+                }
               }
-            }
-            return $.get('templates/' + module.template + '.html', function(html) {
-              html = $(html);
-              html.attr('id', id);
-              $('#' + id + '-pre').replaceWith(html);
-              $(document).trigger(id);
-              if (module.model !== void 0) {
-                return requirejs(['models/' + module.model], function(Model) {
-                  var dataModel;
+              return $.get('templates/' + module.template + '.html', function(html) {
+                html = $(html);
+                $(html[0]).attr('id', id);
+                $('#' + id + '-pre').replaceWith(html);
+                $(document).trigger(id);
+                if (module.model !== void 0) {
+                  return requirejs(['models/' + module.model], function(Model) {
+                    var dataModel;
 
-                  dataModel = new Model();
-                  return dataModel.display(id, module.dataSource, module.title, uri);
-                });
-              }
+                    dataModel = new Model();
+                    return dataModel.display(id, module.dataSource, module.title, uri);
+                  });
+                }
+              });
             });
           });
-        });
-        containers = data.controllers[route].header.containers;
-        $.each(containers, function(id, container) {
-          $(document).on(container[0], function() {
-            var html;
+          containers = data.controllers[route].header.containers;
+          $.each(containers, function(id, container) {
+            $(document).on(container[0], function() {
+              var html;
 
-            $(this).unbind(container[0], arguments.callee);
-            if ($('#' + id).length > 0) {
-              $('#' + id).replaceWith('<div id="' + id + '-pre"></div>');
-            } else {
-              if (container[2] === 'top') {
-                $('#' + container[0]).prepend('<div id="' + id + '-pre"></div>');
+              $(this).unbind(container[0], arguments.callee);
+              if ($('#' + id).length > 0) {
+                $('#' + id).replaceWith('<div id="' + id + '-pre"></div>');
               } else {
-                $('#' + container[0]).append('<div id="' + id + '-pre"></div>');
+                if (container[2] === 'top') {
+                  $('#' + container[0]).prepend('<div id="' + id + '-pre"></div>');
+                } else {
+                  $('#' + container[0]).append('<div id="' + id + '-pre"></div>');
+                }
               }
-            }
-            if (container[1] !== void 0 && container[1] !== '') {
-              return $.get('templates/' + container[1] + '.html', function(html) {
-                html = $(html);
+              if (container[1] !== void 0 && container[1] !== '') {
+                return $.get('templates/' + container[1] + '.html', function(html) {
+                  html = $(html);
+                  $(html[0]).attr('id', id);
+                  $('#' + id + '-pre').replaceWith(html);
+                  return $(document).trigger(id);
+                });
+              } else {
+                console.log('in here');
+                html = $('<div></div>');
                 html.attr('id', id);
                 $('#' + id + '-pre').replaceWith(html);
                 return $(document).trigger(id);
-              });
-            } else {
-              console.log('in here');
-              html = $('<div></div>');
-              html.attr('id', id);
-              $('#' + id + '-pre').replaceWith(html);
-              return $(document).trigger(id);
-            }
+              }
+            });
+            return $(document).trigger('header');
           });
-          return $(document).trigger('header');
-        });
+        }
+      } catch (_error) {
+        err = _error;
+        console.log(err);
       }
       try {
         modules = data.controllers[route].footer.modules;
@@ -105,7 +110,7 @@ require(['backbone', 'uri/URI', 'models/namespace'], function(Backbone, URI, nam
             }
             return $.get('templates/' + module.template + '.html', function(html) {
               html = $(html);
-              html.attr('id', id);
+              $(html[0]).attr('id', id);
               $('#' + id + '-pre').replaceWith(html);
               $(document).trigger(id);
               if (module.model !== void 0) {
@@ -137,7 +142,7 @@ require(['backbone', 'uri/URI', 'models/namespace'], function(Backbone, URI, nam
             if (container[1] !== void 0 && container[1] !== '') {
               return $.get('templates/' + container[1] + '.html', function(html) {
                 html = $(html);
-                html.attr('id', id);
+                $(html[0]).attr('id', id);
                 $('#' + id + '-pre').replaceWith(html);
                 return $(document).trigger(id);
               });
@@ -171,7 +176,7 @@ require(['backbone', 'uri/URI', 'models/namespace'], function(Backbone, URI, nam
             }
             return $.get('templates/' + module.template + '.html', function(html) {
               html = $(html);
-              html.attr('id', id);
+              $(html[0]).attr('id', id);
               $('#' + id + '-pre').replaceWith(html);
               $(document).trigger(id);
               if (module.model !== void 0) {
@@ -203,7 +208,7 @@ require(['backbone', 'uri/URI', 'models/namespace'], function(Backbone, URI, nam
             if (container[1] !== void 0 && container[1] !== '') {
               return $.get('templates/' + container[1] + '.html', function(html) {
                 html = $(html);
-                html.attr('id', id);
+                $(html[0]).attr('id', id);
                 $('#' + id + '-pre').replaceWith(html);
                 return $(document).trigger(id);
               });
@@ -241,7 +246,7 @@ require(['backbone', 'uri/URI', 'models/namespace'], function(Backbone, URI, nam
           }
           return $.get('templates/' + module.template + '.html', function(html) {
             html = $(html);
-            html.attr('id', id);
+            $(html[0]).attr('id', id);
             $('#' + id + '-pre').replaceWith(html);
             $(document).trigger(id);
             if (module.model !== void 0) {
@@ -269,7 +274,7 @@ require(['backbone', 'uri/URI', 'models/namespace'], function(Backbone, URI, nam
           if (container[1] !== void 0 && container[1] !== '') {
             return $.get('templates/' + container[1] + '.html', function(html) {
               html = $(html);
-              html.attr('id', id);
+              $(html[0]).attr('id', id);
               $('#' + id + '-pre').replaceWith(html);
               return $(document).trigger(id);
             });
@@ -304,7 +309,7 @@ require(['backbone', 'uri/URI', 'models/namespace'], function(Backbone, URI, nam
           }
           return $.get('templates/' + module.template + '.html', function(html) {
             html = $(html);
-            html.attr('id', id);
+            $(html[0]).attr('id', id);
             $('#' + id + '-pre').replaceWith(html);
             $(document).trigger(id);
             if (module.model !== void 0) {
@@ -331,13 +336,13 @@ require(['backbone', 'uri/URI', 'models/namespace'], function(Backbone, URI, nam
           if (container[1] !== void 0 && container[1] !== '') {
             return $.get('templates/' + container[1] + '.html', function(html) {
               html = $(html);
-              html.attr('id', id);
+              $(html[0]).attr('id', id);
               $('#' + id + '-pre').replaceWith(html);
               return $(document).trigger(id);
             });
           } else {
             html = $('<div></div>');
-            html.attr('id', id);
+            $(html[0]).attr('id', id);
             $('#' + id + '-pre').replaceWith(html);
             return $(document).trigger(id);
           }
@@ -365,7 +370,7 @@ require(['backbone', 'uri/URI', 'models/namespace'], function(Backbone, URI, nam
           }
           return $.get('templates/' + module.template + '.html', function(html) {
             html = $(html);
-            html.attr('id', id);
+            $(html[0]).attr('id', id);
             $('#' + id + '-pre').replaceWith(html);
             $(document).trigger(id);
             if (module.model !== void 0) {
@@ -392,7 +397,7 @@ require(['backbone', 'uri/URI', 'models/namespace'], function(Backbone, URI, nam
           if (container[1] !== void 0 && container[1] !== '') {
             return $.get('templates/' + container[1] + '.html', function(html) {
               html = $(html);
-              html.attr('id', id);
+              $(html[0]).attr('id', id);
               $('#' + id + '-pre').replaceWith(html);
               return $(document).trigger(id);
             });

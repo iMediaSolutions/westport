@@ -9,10 +9,11 @@ require.config
   paths:
     underscore: '../vendors/underscore'
     backbone: '../vendors/backbone'
+    bootstrap: "../vendors/bootstrap.min"
     route: 'route'
     uri: '../vendors/URIjs'
     controllers: '../controllers'
     models: '../models'
     views: '../views'
-require ['route'], (Router) ->
+require ['route', 'bootstrap'], (Router) ->
   console.log Router
