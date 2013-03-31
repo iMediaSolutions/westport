@@ -12,8 +12,8 @@
           "container-1-1" : ["container-1", "tabcontent"]
         },
         "modules" : {
-          "deptTabs" : {"parentID" : "container-1", "template" : "m-depttabs", "position" : "top", "dataSource" : "../../api/depttab.json", "model" : "TabsModel"},
-          "overviewTabs" : {"parentID" : "1E", "template" : "m-depttabs", "position" : "top", "dataSource" : "../../api/overviewtab.json", "model" : "TabsModel"},
+          "deptTabs" : {"parentID" : "container-1", "template" : "m-depttabs", "position" : "top", "dataSource" : "api/depttab.json", "model" : "TabsModel"},
+          "overviewTabs" : {"parentID" : "1E", "template" : "m-depttabs", "position" : "top", "dataSource" : "api/overviewtab.json", "model" : "TabsModel"},
           "toolbar" : {"parentID" : "container-1-1", "template" : "m-toolbar", "position" : "top"}
         }
       }
