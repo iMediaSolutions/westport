@@ -1,5 +1,8 @@
 westport
 ========
+
+Fascinating https://github.com/tbranyen/backbone-boilerplate
+
 ```bash
 $ git clone ...
 $ npm install
