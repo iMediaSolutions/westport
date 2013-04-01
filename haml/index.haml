@@ -9,6 +9,7 @@
     %link{:href => "css/main.css", :rel => "stylesheet"}/
   %body
     #main
+      
       .tabbable.tabs-left.accordion-group
         %ul#deptTabs.nav.nav-tabs
           %li.active
@@ -22,6 +23,16 @@
           %li
             %a{"data-toggle" => "tab", :href => "#1D"} DPW
         .tab-content
+          .btn-toolbar
+            .btn-group.pull-left
+              %button.btn Add Log
+            .btn-group.pull-right
+              %button.btn Opened 
+              %button.btn Closed 
+              %button.btn Last Updated
+              %button.btn Log
+          %br
+          %br
           #1E.tab-pane.active
             %ul#overviewTabs.nav.nav-tabs
               %li.active
