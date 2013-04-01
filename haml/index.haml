@@ -1,0 +1,120 @@
+!!!
+%html
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
+    %title
+    %meta{:content => "width=device-width", :name => "viewport"}/
+    %link{:href => "css/bootstrap.min.css", :rel => "stylesheet"}/
+    %link{:href => "css/main.css", :rel => "stylesheet"}/
+  %body
+    #main
+      .tabbable.tabs-left.accordion-group
+        %ul#deptTabs.nav.nav-tabs
+          %li.active
+            %a{"data-toggle" => "tab", :href => "#1E"} Overview
+          %li
+            %a{"data-toggle" => "tab", :href => "#1A"} Police
+          %li
+            %a{"data-toggle" => "tab", :href => "#1B"} Fire
+          %li
+            %a{"data-toggle" => "tab", :href => "#1C"} EMS
+          %li
+            %a{"data-toggle" => "tab", :href => "#1D"} DPW
+        .tab-content
+          #1E.tab-pane.active
+            %ul#overviewTabs.nav.nav-tabs
+              %li.active
+                %a{"data-toggle" => "tab", :href => "#1E1"} All
+              %li
+                %a{"data-toggle" => "tab", :href => "#1E2"} Police
+              %li
+                %a{"data-toggle" => "tab", :href => "#1E3"} Fire
+              %li
+                %a{"data-toggle" => "tab", :href => "#1E4"} EMS
+              %li
+                %a{"data-toggle" => "tab", :href => "#1E5"} DPW
+            .tab-content
+              #1E1.tab-pane.active
+                %table.table.table-striped
+                  %thead
+                    %tr
+                      %th Dept.
+                      %th Code
+                      %th Time
+                      %th Description
+                      %th Status
+                  %tbody
+                    %tr
+                      %td EMS
+                      %td 20
+                      %td 1345
+                      %td House Fire
+                      %td On-Scene
+                %iframe{:frameborder => "0", :height => "600", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "https://maps.google.com/maps?hl=en&q=818+Main+Road+Westport,+MA&ie=UTF8&hq=&hnear=818+Main+Rd,+Westport,+Massachusetts+02790&gl=us&t=m&ll=41.578984,-71.09004&spn=0.019261,0.025749&z=14&iwloc=A&output=embed", :width => "600"}
+              #1E2.tab-pane
+                %table.table.table-striped
+                  %thead
+                    %tr
+                      %th Dept.
+                      %th Code
+                      %th Time
+                      %th Description
+                      %th Status
+                  %tbody
+                %iframe{:frameborder => "0", :height => "600", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "https://maps.google.com/maps?hl=en&q=818+Main+Road+Westport,+MA&ie=UTF8&hq=&hnear=818+Main+Rd,+Westport,+Massachusetts+02790&gl=us&t=m&ll=41.578984,-71.09004&spn=0.019261,0.025749&z=14&iwloc=A&output=embed", :width => "600"}
+              #1E3.tab-pane
+                %table.table.table-striped
+                  %thead
+                    %tr
+                      %th Dept.
+                      %th Code
+                      %th Time
+                      %th Description
+                      %th Status
+                  %tbody
+                %iframe{:frameborder => "0", :height => "600", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "https://maps.google.com/maps?hl=en&q=818+Main+Road+Westport,+MA&ie=UTF8&hq=&hnear=818+Main+Rd,+Westport,+Massachusetts+02790&gl=us&t=m&ll=41.578984,-71.09004&spn=0.019261,0.025749&z=14&iwloc=A&output=embed", :width => "600"}
+              #1E4.tab-pane
+                %table.table.table-striped
+                  %thead
+                    %tr
+                      %th Dept.
+                      %th Code
+                      %th Time
+                      %th Description
+                      %th Status
+                  %tbody
+                %iframe{:frameborder => "0", :height => "600", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "https://maps.google.com/maps?hl=en&q=818+Main+Road+Westport,+MA&ie=UTF8&hq=&hnear=818+Main+Rd,+Westport,+Massachusetts+02790&gl=us&t=m&ll=41.578984,-71.09004&spn=0.019261,0.025749&z=14&iwloc=A&output=embed", :width => "600"}
+              #1E5.tab-pane
+                %iframe{:frameborder => "0", :height => "600", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "https://maps.google.com/maps?hl=en&q=818+Main+Road+Westport,+MA&ie=UTF8&hq=&hnear=818+Main+Rd,+Westport,+Massachusetts+02790&gl=us&t=m&ll=41.578984,-71.09004&spn=0.019261,0.025749&z=14&iwloc=A&output=embed", :width => "600"}
+          #1A.tab-pane
+            %p Hello Section A
+          #1B.tab-pane
+            #accordion2.accordion
+              .accordion-group
+                .accordion-heading
+                  %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseOne"}
+                    Record #15050340
+                #collapseOne.accordion-body.collapse.in
+                  .accordion-inner
+                    .pull-left
+                      %form
+                        %fieldset
+                          %legend Notes
+                          %textarea{:rows => "9"}
+                      %a.pull-right history
+                    .pull-right
+                      %iframe{:frameborder => "0", :height => "300", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "https://maps.google.com/maps?hl=en&q=818+Main+Road+Westport,+MA&ie=UTF8&hq=&hnear=818+Main+Rd,+Westport,+Massachusetts+02790&gl=us&t=m&ll=41.578984,-71.09004&spn=0.019261,0.025749&z=14&iwloc=A&output=embed", :width => "300"}
+              .accordion-group
+                .accordion-heading
+                  %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseTwo"}
+                    Collapsible Group Item #2
+                #collapseTwo.accordion-body.collapse
+                  .accordion-inner
+                    Anim pariatur cliche...
+            %p Hello Section B
+          #1C.tab-pane
+            %p And Section C
+          #1D.tab-pane
+            %p Finally Section D
+    %script{"data-main" => "js/core", :src => "js/vendors/require-jquery.js"}
