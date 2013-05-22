@@ -7,6 +7,7 @@ require.config
       deps: ['underscore']
       exports: 'Backbone'
   paths:
+    async: '../vendors/async'
     underscore: '../vendors/underscore'
     backbone: '../vendors/backbone'
     bootstrap: "../vendors/bootstrap.min"
