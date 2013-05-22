@@ -12,13 +12,14 @@ $ npm install
 ![Mockup 3][3]
 
 #### Features
-User Login (local - node level)
+
+* User Login (local - node level)
 
 * email address username
-** password (reset features)
-** SMS security pass (future feature)
-** Official ID
-** Contact Info
+	- password (reset features)
+	- SMS security pass (future feature)
+	- Official ID
+	- Contact Info
 
 * Stealth Mode
 * Guest Services (Public Data)
