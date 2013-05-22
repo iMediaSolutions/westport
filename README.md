@@ -52,7 +52,7 @@ $ npm install
 	* STATUS 		(VERSIONED)
 	* GROUP 		(VERSIONED)
 
-*New Fields can be added, with prompt:
+* New Fields can be added, with prompt:
 	* Suggests are given.
 	* Icon Selection available. 
 	* Checkboxes for Share (Local, State, Federal)
