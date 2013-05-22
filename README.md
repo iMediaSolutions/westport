@@ -35,14 +35,14 @@ $ npm install
 * Nodes will be auto updated with regression testing, unit testing, reversion on fail.
 
 * DEFAULT FIELDS  (default properties), i.e. public:[true|false]
-** DATETIME STAMP	(VERSIONED)
-** INCIDENT #
-** TYPE 		(VERSIONED)
-** UNIT (VEHICLE) 	(VERSIONED)
-** COMMENTS 		(VERSIONED)
-** LOCATION 		(VERSIONED)	Google Maps API
-** STATUS 		(VERSIONED)
-** GROUP 		(VERSIONED)
+	* DATETIME STAMP	(VERSIONED)
+	* INCIDENT #
+	* TYPE			(VERSIONED)
+	* UNIT (VEHICLE) 	(VERSIONED)
+	* COMMENTS 		(VERSIONED)
+	* LOCATION 		(VERSIONED)	Google Maps API
+	* STATUS 		(VERSIONED)
+	* GROUP 		(VERSIONED)
 
 #### QUESTIONS
 * What is public data?
