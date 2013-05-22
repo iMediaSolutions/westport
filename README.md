@@ -11,52 +11,42 @@ $ npm install
 ### Initial Architecture
 ![Mockup 3][3]
 
+#### Features
 User Login (local - node level)
 
-  email address username
-	password (reset features)
-	SMS security pass (future feature)
-	Official ID
-	Contact Info
+* email address username
+** password (reset features)
+** SMS security pass (future feature)
+** Official ID
+** Contact Info
 
-Stealth Mode
+* Stealth Mode
+* Guest Services (Public Data)
+* Nodes obtain DNS and find other division nodes
+* Universal Fields
+* Node / Federation Based System
+* Central DNS Server
+* Database API
+* Simple Install
+* Each Division/Department will Fork Master Repo
+* Database Schema will be recorded and versioned to local repo
+* Transaction Log
+* Nodes will be auto updated with regression testing, unit testing, reversion on fail.
 
-Guest Services (Public Data)
+* DEFAULT FIELDS  (default properties), i.e. public:[true|false]
+** DATETIME STAMP	(VERSIONED)
+** INCIDENT #
+** TYPE 		(VERSIONED)
+** UNIT (VEHICLE) 	(VERSIONED)
+** COMMENTS 		(VERSIONED)
+** LOCATION 		(VERSIONED)	Google Maps API
+** STATUS 		(VERSIONED)
+** GROUP 		(VERSIONED)
 
-Nodes obtain DNS and find other division nodes
+#### QUESTIONS
+* What is public data?
 
-Universal Fields
-
-Node / Federation Based System
-
-Central DNS Server
-
-Database API
-
-Simple Install
-
-Each Division/Department will Fork Master Repo
-
-Database Schema will be recorded and versioned to local repo
-
-Transaction Log
-
-Nodes will be auto updated with regression testing, unit testing, reversion on fail.
-
-What is public data?
-
-DEFAULT FIELDS  (default properties), i.e. public:[true|false]
-
-* DATETIME STAMP	(VERSIONED)
-* INCIDENT #
-* TYPE 			      (VERSIONED)
-* UNIT (VEHICLE) 	(VERSIONED)
-* COMMENTS 		    (VERSIONED)
-* LOCATION 		    (VERSIONED)	Google Maps API
-* STATUS 		      (VERSIONED)
-* GROUP 		      (VERSIONED)
-
-
+#### CASES
 COMMENT CASE:
 
 <blockquote>
