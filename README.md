@@ -52,6 +52,11 @@ $ npm install
 	* STATUS 		(VERSIONED)
 	* GROUP 		(VERSIONED)
 
+*New Fields can be added, with prompt:
+	* Suggests are given.
+	* Icon Selection available. 
+	* Checkboxes for Share (Local, State, Federal)
+
 #### QUESTIONS
 * What is public data?
 
@@ -63,10 +68,7 @@ DISPATCHER LOGS CALL WITH INITIAL COMMENT
 * CALL RECEIVED, CAR REPORTED STOLEN - DISPATCHER #101
 
 
-New Fields can be added, with prompt:
-* Suggests are given.
-* Icon Selection available. 
-* Checkboxes for Share (Local, State, Federal)
+
 
 
 ### Dept View
