@@ -64,9 +64,9 @@ DISPATCHER LOGS CALL WITH INITIAL COMMENT
 
 
 New Fields can be added, with prompt:
-	* Suggests are given.
-	* Icon Selection available. 
-	* Checkboxes for Share (Local, State, Federal)
+* Suggests are given.
+* Icon Selection available. 
+* Checkboxes for Share (Local, State, Federal)
 
 
 ### Dept View
