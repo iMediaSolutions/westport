@@ -6,6 +6,14 @@ Westport Civil Management Application
 $ git clone ...
 $ npm install
 ```
+## Dependencies
+* A desire to change the world via awesome public service data management.
+* Node.js
+* GruntJS
+* Ruby
+* HAML, Coffee, SASS
+ 
+
 ## Mockups
 
 ### Initial Architecture
