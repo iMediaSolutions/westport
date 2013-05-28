@@ -18,6 +18,7 @@ $ npm install
 
 ### Initial Architecture
 ![Mockup 3][3]
+![Mockup 4][4]
 
 #### Features
 
@@ -80,3 +81,5 @@ DISPATCHER LOGS CALL WITH INITIAL COMMENT
 [1]: https://s3.amazonaws.com/iMediaS3/Civil+App%2C+Dept+View+v2.png "Dept View"
 [2]: https://s3.amazonaws.com/iMediaS3/Civil+App%2C+Overview+v2.png "Overview"
 [3]: https://s3.amazonaws.com/iMediaS3/20130522_134228.jpg "Initial Architecture"
+[4]: https://s3.amazonaws.com/iMediaS3/20130528_165804.jpg "Additional Architecture"
+
