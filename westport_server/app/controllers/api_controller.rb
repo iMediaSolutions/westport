@@ -1,13 +1,13 @@
 class ApiController < ApplicationController
   def createDepartment
-	Department.create(name: params[:name], location: params[:location])
+	Department.create(dep_id: params[:dep_id], name: params[:name], location: params[:location])
 	@view = Department.all
   end
 
   def createIncident
-	@view = Incident.create(type: params[:type], unit: params[:unit], comment: params[:comment], location: params[:location], status: params[:status], group: params[:group], dt: DateTime.now)
+	@view = Incident.create(incident: params[:incident], type: params[:type], unit: params[:unit], comment: params[:comment], location: params[:location], status: params[:status], group: params[:group], dt: DateTime.parse(params[:dt]))
 	if(params.has_key?(:dep_id))
-		Department.where(id: params[:dep_id]).first.incidents.push(@view)
+		Department.where(dep_id: params[:dep_id]).first.incidents.push(@view)
 	end
 	@view = Incident.all
   end
@@ -18,7 +18,7 @@ class ApiController < ApplicationController
 
   def getIncidents
 	if(params.has_key?(:dep_id))
-		@view = Department.where(id: params[:dep_id]).first.incidents
+		@view = Department.where(dep_id: params[:dep_id]).first.incidents
 	else
 		@view = Incident.all
 	end
@@ -44,7 +44,7 @@ class ApiController < ApplicationController
 	if (params.has_key?(:group))
 		@view.group = params[:group]
 	end
-	@view.dt = DateTime.now
+	@view.dt = DateTime.parse(params[:dt])
 	@view.save
 	@view = Incident.all
   end

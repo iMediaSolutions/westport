@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-WestportMysqlServer::Application.config.secret_token = 'ae079385f3fe537122691748f424111f6259d28f0316bdf860304952be5bddb82b8f7b73cc35240eff565aa5526c872e64d772a19d5ec41ae463ba4bce989ad0'
+WestportMysqlServer::Application.config.secret_token = 'f290a5dd96e73da80acf69b96acb3bef39b25f4e257582aa261900c0debadb3214589828f02bf2fc97781e02b3daf498c2d825318a26b5dfebce5f815263a40e'

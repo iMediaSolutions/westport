@@ -1,4 +1,5 @@
-'use strict';require.config({
+'use strict';
+require.config({
   shim: {
     underscore: {
       exports: '_'
@@ -9,10 +10,10 @@
     }
   },
   paths: {
-    async: '../vendors/async',
     underscore: '../vendors/underscore',
+    bootstrap: '../vendors/bootstrap.min',
     backbone: '../vendors/backbone',
-    bootstrap: "../vendors/bootstrap.min",
+    text: '../vendors/text',
     route: 'route',
     uri: '../vendors/URIjs',
     controllers: '../controllers',

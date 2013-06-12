@@ -3,7 +3,6 @@ var __hasProp = {}.hasOwnProperty,
 
 define(['models/BaseModel'], function(BaseModel) {
   var TestModel, _ref;
-
   return TestModel = (function(_super) {
     __extends(TestModel, _super);
 
@@ -16,8 +15,9 @@ define(['models/BaseModel'], function(BaseModel) {
       return console.log('it worked!');
     };
 
-    TestModel.prototype.route = function() {
-      return console.log('in route');
+    TestModel.prototype.route = function(id, url, title, actions) {
+      console.log('in route');
+      return console.log(actions);
     };
 
     return TestModel;

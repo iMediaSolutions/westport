@@ -1,6 +1,5 @@
 define([], function() {
   var BaseModule;
-
   return BaseModule = (function() {
     function BaseModule() {}
 

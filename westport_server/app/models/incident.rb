@@ -14,7 +14,5 @@ class Incident
 
   belongs_to  :department
 
-  index({ incident: 1 }, { unique: true, background: true })
-  sequence :incident
   attr_accessible :dt, :incident, :type, :unit, :comment, :location, :status, :group
 end

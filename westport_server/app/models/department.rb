@@ -4,9 +4,8 @@ class Department
 
   field :name, type: String
   field :location, type: String 
-  field :id, type: Integer
+  field :dep_id, type: Integer
   has_many :incidents
 
-  sequence :id
-  attr_accessible :name, :location
+  attr_accessible :name, :location, :dep_id
 end

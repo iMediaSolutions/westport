@@ -1,0 +1,35 @@
+.incident.span12.row
+  .span8.pull-left.row-fluid.no-left
+    .span12
+      %label.no-left
+        Incident #: 
+        %span.inc
+      %label.pull-right
+        STATUS: 
+        %input.status
+      .pull-left.span8.no-left
+        %label.span3.no-left
+          Code: 
+          %input.code
+        %label
+          Location: 
+          %input.loc
+        %span.span12.no-left Description:
+        %textarea.description.span12.no-left
+        .span12.no-left.row
+          .span4.no-left
+            %p Responder
+            %select.responder
+          .span4
+            %p Dispatcher
+            %select.dispatcher
+          .span4
+            %p Reporter
+            %input.reporter
+      .pull-right.span4
+        %span.date
+        .map
+  .span12.row.no-left
+    .comment.span4
+    .other.span8
+

@@ -1,26 +1,87 @@
 {"controllers": {
   "default" : {
+    "header": {
+      "containers" : {
+        "container-1" : ["header"]
+      },
+      "modules" : {
+        "m-test-1" : {"parentID" : "container-1", "template" : "test", "model" : "TestModel"},
+        "m-test-2" : {"parentID" : "container-1", "template" : "test"}
+      }
+    },
+    "footer" :{
+      "containers" : {
+        "container-6" : ["footer"]
+      },
+      "modules" : {
+        "m-test-1" : {"parentID" : "container-6", "template" : "test", "model" : "TestModel"},
+        "m-test-2" : {"parentID" : "container-6", "template" : "test"}
+      }
+    },
     "views" : {
       "default" : {
         "containers" : {
-          "container-1" : ["container", "tabblediv"],
-          "1E" : ["container-1-1", "tabpane"],
-          "1A" : ["container-1-1", "tabpane"],
-          "1B" : ["container-1-1", "tabpane"],
-          "1C" : ["container-1-1", "tabpane"],
-          "1D" : ["container-1-1", "tabpane"],
-          "container-1-1" : ["container-1", "tabcontent"],
-          "overview-container" : ["1E", "tabcontent"]
+          "container-2" : ["container"],
+          "container-3" : ["container"],
+          "container-4" : ["container"],
+          "container-5" : ["container"]
         },
         "modules" : {
-          "deptTabs" : {"parentID" : "container-1", "template" : "m-depttabs", "position" : "top", "dataSource" : "../../api/depttab.json", "model" : "TabsModel"},
-          "overviewTabs" : {"parentID" : "1E", "template" : "m-depttabs", "position" : "top", "dataSource" : "../../api/overviewtab.json", "model" : "TabsModel"},
-          "1E1" : {"parentID" : "overview-container", "template" : "m-overview", "model" :"OverviewModel"},
-          "1E2" : {"parentID" : "overview-container", "template" : "m-overview", "model" :"OverviewModel"},
-          "1E3" : {"parentID" : "overview-container", "template" : "m-overview", "model" :"OverviewModel"},
-          "1E4" : {"parentID" : "overview-container", "template" : "m-overview", "model" :"OverviewModel"},
-          "1E5" : {"parentID" : "overview-container", "template" : "m-overview", "model" :"OverviewModel"},
-          "toolbar" : {"parentID" : "container-1-1", "template" : "m-toolbar", "position" : "top"}
+          "m-test-3" : {"parentID" : "container-2", "template" : "heavytest", "model" : "TestModel"},
+          "m-test-6" : {"parentID" : "container-3", "template" : "heavytest"}
+        }
+      },
+      "default2" : {
+        "containers" : {
+          "container-2" : ["container","l-one-column"],
+          "container-3" : ["container","l-one-column"]
+        },
+        "modules" : {
+          "m-test-9" : {"parentID" : "container-2", "template" : "test"},
+          "m-test-10" : {"parentID" : "container-3", "template" : "test"}
+        }
+      }
+    }
+  },
+  "dashboard" : {
+    "header": {
+      "containers" : {
+        "container-1" : ["header"]
+      },
+      "modules" : {
+        "m-test-1" : {"parentID" : "container-1", "template" : "test", "model" : "TestModel"}
+      }
+    },
+    "footer" :{
+      "containers" : {
+        "container-6" : ["footer"]
+      },
+      "modules" : {
+        "m-test-2" : {"parentID" : "container-6", "template" : "test"}
+      }
+    },
+    "views" : {
+      "index" : {
+        "containers" : {
+          "container-2-1" : ["container-2", "", "bottom"],
+          "container-2" : ["container"],
+          "container-3" : ["container"],
+          "container-4" : ["container"],
+          "container-5" : ["container"]
+        },
+        "modules" : {
+          "m-test-6" : {"parentID" : "container-3", "template" : "heavytest"},
+          "m-test-top" : {"parentID" : "container-2", "template" : "heavytest", "position" : "top"},
+          "m-test-in" : {"parentID": "container-2-1", "template" : "test"}
+        }
+      },
+      "other" : {
+        "containers" : {
+          "container-2" : ["container","l-one-column"],
+          "container-3" : ["container","l-one-column"]
+        },
+        "modules" : {
+          "m-test-10" : {"parentID" : "container-3", "template" : "test"}
         }
       }
     }

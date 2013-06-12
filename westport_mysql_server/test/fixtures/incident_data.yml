@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  incident_id: 1
+  incident_type_id: 
+  value: MyString
+
+two:
+  incident_id: 1
+  incident_type_id: 
+  value: MyString
