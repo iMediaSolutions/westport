@@ -15,6 +15,7 @@ define(['text!/templates/incident.html', 'models/namespace'], function(inc, name
         incd = $(inc);
         $('#' + id + ' .incloc').prepend(incd);
         incd.attr('id', 'm-incident');
+        incd.addClass('make');
         $('#' + id + ' .incident_body').html('');
         return requirejs(['models/IncidentModel'], function(Model) {
           var dataModel;

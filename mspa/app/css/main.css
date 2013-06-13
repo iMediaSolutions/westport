@@ -12,11 +12,17 @@
   border: 0px;
   width: 80px; }
 
+.incident.make input {
+  border: 1px solid; }
+
 .incident textarea {
   border: 0px;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none; }
+
+.incident.make textarea {
+  border: 1px solid; }
 
 .incident .loc {
   width: 410px; }
@@ -35,4 +41,13 @@
   -moz-appearance: none;
   appearance: none;
   border: none;
-  width: 100%; }
+  width: 100%;
+  padding: 0px;
+  line-height: 10px; }
+
+.incident.make select {
+  border: 1px solid;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  height: 25px; }

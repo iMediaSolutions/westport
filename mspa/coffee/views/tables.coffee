@@ -8,6 +8,7 @@ define ['text!/templates/incident.html', 'models/namespace'], (inc, namespace)->
 				incd = $(inc)
 				$('#' + id + ' .incloc').prepend(incd)
 				incd.attr('id', 'm-incident')
+				incd.addClass('make')
 				$('#' + id + ' .incident_body').html('')
 				requirejs ['models/IncidentModel'], (Model) -> 
 					dataModel = new Model()
